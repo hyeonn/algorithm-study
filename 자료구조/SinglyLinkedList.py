@@ -68,7 +68,7 @@ class SinglyLinkedList(object):
 
     # 주어진 data의 위치에 노드 삽입하기
     def insertNodeAtData(self, data, node):
-        idx = self.getdataIndex(data)
+        idx = self.getDataIndex(data)
         if idx >= 0:
             self.insertNodeAtIndex(idx, node)
         else:
@@ -111,4 +111,19 @@ class SinglyLinkedList(object):
             cur = cur.next
         print(s)
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
+    sl = SinglyLinkedList()
+    sl.append(Node(1))
+    sl.append(Node(2))
+    sl.append(Node(3))
+    sl.append(Node(5))
+    sl.insertNodeAtIndex(3, Node(4))
+    sl.print()
+    print(sl.getDataIndex(1))
+    print(sl.getDataIndex(2))
+    print(sl.getDataIndex(3))
+    print(sl.getDataIndex(4))
+    print(sl.getDataIndex(5))
+    sl.insertNodeAtData(1, Node(0))
+    sl.print()
+
